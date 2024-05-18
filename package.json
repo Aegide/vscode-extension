@@ -1,0 +1,35 @@
+{
+    "name": "jsont",
+    "displayName": "JSONT Language Support",
+    "description": "JSONT Language Support for .jsont files.",
+    "version": "0.0.1",
+    "icon": "icons/icon.png",
+    "engines": {
+        "vscode": ">=0.9.0-pre.1"
+    },
+    "publisher": "Aegide",
+    "contributes": {
+        "languages": [
+            {
+                "id": "jsont",
+                "aliases": [
+                    "JSONT"
+                ],
+                "extensions": [
+                    ".jsont"
+                ],
+                "icon": {
+                    "light": "icons/icon.svg",
+                    "dark": "icons/icon.svg"
+                }
+            }
+        ],
+        "grammars": [
+            {
+                "language": "jsont",
+                "scopeName": "source.jsont",
+                "path": "./syntaxes/jsont.tmLanguage.json"
+            }
+        ]
+    }
+}
