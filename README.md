@@ -15,4 +15,8 @@ This extension applies to `.jsont` files.
 - Multiple JSONs per file
 - Mandatory fields (ex: id)
 
+### Windows
+
+`mklink /d %USERPROFILE%\.vscode\extensions\vscode-extension C:\Github\vscode-extension`
+
 <br>
