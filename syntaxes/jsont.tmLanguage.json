@@ -1,701 +1,795 @@
 {
-    "information_for_contributors": [
-        "https://github.com/eclipse/buildship/blob/master/org.eclipse.buildship.kotlindsl.provider/kotlin.tmLanguage.json"
-    ],
-    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
     "name": "JSONT",
     "scopeName": "source.jsont",
-    "patterns": [
-        {
-            "include": "#import"
-        },
-        {
-            "include": "#package"
-        },
-        {
-            "include": "#code"
-        }
-    ],
     "fileTypes": [
         "jsont"
     ],
+    "patterns": [
+        {
+            "include": "#comment"
+        },
+        {
+            "include": "#comment.block"
+        },
+        {
+            "include": "#comment.block.documentation"
+        },
+        {
+            "include": "#comment.line"
+        },
+        {
+            "include": "#comment.line.double-dash"
+        },
+        {
+            "include": "#comment.line.double-slash"
+        },
+        {
+            "include": "#comment.line.number-sign"
+        },
+        {
+            "include": "#comment.line.percentage"
+        },
+        {
+            "include": "#constant"
+        },
+        {
+            "include": "#constant.character"
+        },
+        {
+            "include": "#constant.character.escape"
+        },
+        {
+            "include": "#constant.language"
+        },
+        {
+            "include": "#constant.numeric"
+        },
+        {
+            "include": "#constant.other"
+        },
+        {
+            "include": "#constant.regexp"
+        },
+        {
+            "include": "#constant.rgb-value"
+        },
+        {
+            "include": "#constant.sha.git-rebase"
+        },
+        {
+            "include": "#emphasis"
+        },
+        {
+            "include": "#entity"
+        },
+        {
+            "include": "#entity.name"
+        },
+        {
+            "include": "#entity.name.class"
+        },
+        {
+            "include": "#entity.name.function"
+        },
+        {
+            "include": "#entity.name.method"
+        },
+        {
+            "include": "#entity.name.section"
+        },
+        {
+            "include": "#entity.name.selector"
+        },
+        {
+            "include": "#entity.name.tag"
+        },
+        {
+            "include": "#entity.name.type"
+        },
+        {
+            "include": "#entity.other"
+        },
+        {
+            "include": "#entity.other.attribute-name"
+        },
+        {
+            "include": "#entity.other.inherited-class"
+        },
+        {
+            "include": "#header"
+        },
+        {
+            "include": "#invalid"
+        },
+        {
+            "include": "#invalid.deprecated"
+        },
+        {
+            "include": "#invalid.illegal"
+        },
+        {
+            "include": "#keyword"
+        },
+        {
+            "include": "#keyword.control"
+        },
+        {
+            "include": "#keyword.control.less"
+        },
+        {
+            "include": "#keyword.operator"
+        },
+        {
+            "include": "#keyword.operator.new"
+        },
+        {
+            "include": "#keyword.other"
+        },
+        {
+            "include": "#keyword.other.unit"
+        },
+        {
+            "include": "#markup"
+        },
+        {
+            "include": "#markup.bold"
+        },
+        {
+            "include": "#markup.changed"
+        },
+        {
+            "include": "#markup.deleted"
+        },
+        {
+            "include": "#markup.heading"
+        },
+        {
+            "include": "#markup.inline.raw"
+        },
+        {
+            "include": "#markup.inserted"
+        },
+        {
+            "include": "#markup.italic"
+        },
+        {
+            "include": "#markup.list"
+        },
+        {
+            "include": "#markup.list.numbered"
+        },
+        {
+            "include": "#markup.list.unnumbered"
+        },
+        {
+            "include": "#markup.other"
+        },
+        {
+            "include": "#markup.punctuation.list.beginning"
+        },
+        {
+            "include": "#markup.punctuation.quote.beginning"
+        },
+        {
+            "include": "#markup.quote"
+        },
+        {
+            "include": "#markup.raw"
+        },
+        {
+            "include": "#markup.underline"
+        },
+        {
+            "include": "#markup.underline.link"
+        },
+        {
+            "include": "#meta"
+        },
+        {
+            "include": "#meta.cast"
+        },
+        {
+            "include": "#meta.parameter.type.variable"
+        },
+        {
+            "include": "#meta.preprocessor"
+        },
+        {
+            "include": "#meta.preprocessor.numeric"
+        },
+        {
+            "include": "#meta.preprocessor.string"
+        },
+        {
+            "include": "#meta.return-type"
+        },
+        {
+            "include": "#meta.selector"
+        },
+        {
+            "include": "#meta.structure.dictionary.key.python"
+        },
+        {
+            "include": "#meta.tag"
+        },
+        {
+            "include": "#meta.type.annotation"
+        },
+        {
+            "include": "#meta.type.name"
+        },
+        {
+            "include": "#metatag.php"
+        },
+        {
+            "include": "#storage"
+        },
+        {
+            "include": "#storage.modifier"
+        },
+        {
+            "include": "#storage.modifier.import.java"
+        },
+        {
+            "include": "#storage.modifier.package.java"
+        },
+        {
+            "include": "#storage.type"
+        },
+        {
+            "include": "#storage.type.cs"
+        },
+        {
+            "include": "#storage.type.java"
+        },
+        {
+            "include": "#string"
+        },
+        {
+            "include": "#string.html"
+        },
+        {
+            "include": "#string.interpolated"
+        },
+        {
+            "include": "#string.jade"
+        },
+        {
+            "include": "#string.other"
+        },
+        {
+            "include": "#string.quoted"
+        },
+        {
+            "include": "#string.quoted.double"
+        },
+        {
+            "include": "#string.quoted.other"
+        },
+        {
+            "include": "#string.quoted.single"
+        },
+        {
+            "include": "#string.quoted.triple"
+        },
+        {
+            "include": "#string.regexp"
+        },
+        {
+            "include": "#string.unquoted"
+        },
+        {
+            "include": "#string.xml"
+        },
+        {
+            "include": "#string.yaml"
+        },
+        {
+            "include": "#strong"
+        },
+        {
+            "include": "#support"
+        },
+        {
+            "include": "#support.class"
+        },
+        {
+            "include": "#support.constant"
+        },
+        {
+            "include": "#support.function"
+        },
+        {
+            "include": "#support.function.git-rebase"
+        },
+        {
+            "include": "#support.other"
+        },
+        {
+            "include": "#support.property-value"
+        },
+        {
+            "include": "#support.type"
+        },
+        {
+            "include": "#support.type.property-name"
+        },
+        {
+            "include": "#support.type.property-name.css"
+        },
+        {
+            "include": "#support.type.property-name.less"
+        },
+        {
+            "include": "#support.type.property-name.scss"
+        },
+        {
+            "include": "#support.variable"
+        },
+        {
+            "include": "#variable"
+        },
+        {
+            "include": "#variable.language"
+        },
+        {
+            "include": "#variable.name"
+        },
+        {
+            "include": "#variable.other"
+        },
+        {
+            "include": "#variable.parameter"
+        }
+    ],
     "repository": {
-        "import": {
-            "begin": "\\b(import)\\b\\s?([\\w+.]*\\w+)?\\s*",
-            "beginCaptures": {
-                "1": {
-                    "name": "storage.type.import.jsont"
-                },
-                "2": {
-                    "name": "storage.modifier.import.jsont"
-                }
-            },
-            "end": ";|$",
-            "name": "meta.import.jsont",
-            "contentName": "entity.name.package.jsont",
-            "patterns": [
-                {
-                    "include": "#comments"
-                },
-                {
-                    "include": "#hard-keywords"
-                },
-                {
-                    "match": "\\*",
-                    "name": "variable.language.wildcard.jsont"
-                }
-            ]
+        "comment": {
+            "match": "comment$",
+            "name": "comment.jsont"
         },
-        "package": {
-            "begin": "\\b(package)\\b\\s*",
-            "beginCaptures": {
-                "1": {
-                    "name": "storage.type.package.jsont"
-                }
-            },
-            "end": ";|$",
-            "name": "meta.package.jsont",
-            "contentName": "entity.name.package.jsont",
-            "patterns": [
-                {
-                    "include": "#comments"
-                }
-            ]
-        },
-        "code": {
-            "patterns": [
-                {
-                    "include": "#comments"
-                },
-                {
-                    "include": "#keywords"
-                },
-                {
-                    "include": "#annotation-simple"
-                },
-                {
-                    "include": "#annotation-site-list"
-                },
-                {
-                    "include": "#annotation-site"
-                },
-                {
-                    "include": "#class-declaration"
-                },
-                {
-                    "include": "#object-declaration"
-                },
-                {
-                    "include": "#type-alias"
-                },
-                {
-                    "include": "#function-declaration"
-                },
-                {
-                    "include": "#variable-declaration"
-                },
-                {
-                    "include": "#constant-declaration"
-                },
-                {
-                    "include": "#variable"
-                },
-                {
-                    "include": "#object"
-                },
-                {
-                    "include": "#type-constraint"
-                },
-                {
-                    "include": "#type-annotation"
-                },
-                {
-                    "include": "#function-call"
-                },
-                {
-                    "include": "#property.reference"
-                },
-                {
-                    "include": "#method-reference"
-                },
-                {
-                    "include": "#key"
-                },
-                {
-                    "include": "#string"
-                },
-                {
-                    "include": "#string-empty"
-                },
-                {
-                    "include": "#string-multiline"
-                },
-                {
-                    "include": "#character"
-                },
-                {
-                    "include": "#lambda-arrow"
-                },
-                {
-                    "include": "#operators"
-                },
-                {
-                    "include": "#self-reference"
-                },
-                {
-                    "include": "#decimal-literal"
-                },
-                {
-                    "include": "#hex-literal"
-                },
-                {
-                    "include": "#binary-literal"
-                },
-                {
-                    "include": "#boolean-literal"
-                },
-                {
-                    "include": "#null-literal"
-                },
-                {
-                    "match": ",",
-                    "name": "punctuation.separator.delimiter.jsont"
-                },
-                {
-                    "match": "\\.",
-                    "name": "punctuation.separator.period.jsont"
-                },
-                {
-                    "match": "\\?\\.",
-                    "name": "punctuation.accessor.optional.jsont"
-                }
-            ]
-        },
-        "comments": {
-            "patterns": [
-                {
-                    "include": "#comment-line"
-                },
-                {
-                    "include": "#comment-block"
-                },
-                {
-                    "include": "#comment-javadoc"
-                }
-            ]
-        },
-        "comment-line": {
-            "begin": "//",
-            "end": "$",
-            "name": "comment.line.double-slash.jsont"
-        },
-        "comment-block": {
-            "begin": "/\\*(?!\\*)",
-            "end": "\\*/",
+        "comment.block": {
+            "match": "comment_block$",
             "name": "comment.block.jsont"
         },
-        "comment-javadoc": {
-            "patterns": [
-                {
-                    "begin": "/\\*\\*",
-                    "end": "\\*/",
-                    "name": "comment.block.javadoc.jsont",
-                    "patterns": [
-                        {
-                            "match": "@(author|deprecated|return|see|serial|since|version)\\b",
-                            "name": "keyword.other.documentation.javadoc.jsont"
-                        },
-                        {
-                            "match": "(@param)\\s+(\\S+)",
-                            "captures": {
-                                "1": {
-                                    "name": "keyword.other.documentation.javadoc.jsont"
-                                },
-                                "2": {
-                                    "name": "variable.parameter.jsont"
-                                }
-                            }
-                        },
-                        {
-                            "match": "(@(?:exception|throws))\\s+(\\S+)",
-                            "captures": {
-                                "1": {
-                                    "name": "keyword.other.documentation.javadoc.jsont"
-                                },
-                                "2": {
-                                    "name": "entity.name.type.class.jsont"
-                                }
-                            }
-                        },
-                        {
-                            "match": "{(@link)\\s+(\\S+)?#([\\w$]+\\s*\\([^\\(\\)]*\\)).*}",
-                            "captures": {
-                                "1": {
-                                    "name": "keyword.other.documentation.javadoc.jsont"
-                                },
-                                "2": {
-                                    "name": "entity.name.type.class.jsont"
-                                },
-                                "3": {
-                                    "name": "variable.parameter.jsont"
-                                }
-                            }
-                        }
-                    ]
-                }
-            ]
+        "comment.block.documentation": {
+            "match": "comment_block_documentation$",
+            "name": "comment.block.documentation.jsont"
         },
-        "keywords": {
-            "patterns": [
-                {
-                    "include": "#prefix-modifiers"
-                },
-                {
-                    "include": "#postfix-modifiers"
-                },
-                {
-                    "include": "#soft-keywords"
-                },
-                {
-                    "include": "#hard-keywords"
-                },
-                {
-                    "include": "#control-keywords"
-                },
-                {
-                    "include": "#map-keywords"
-                }
-            ]
+        "comment.line": {
+            "match": "comment_line$",
+            "name": "comment.line.jsont"
         },
-        "prefix-modifiers": {
-            "match": "\\b(abstract|final|enum|open|annotation|sealed|data|override|final|lateinit|private|protected|public|internal|inner|companion|noinline|crossinline|vararg|reified|tailrec|operator|infix|inline|external|const|suspend|value)\\b",
-            "name": "storage.modifier.other.jsont"
+        "comment.line.double-dash": {
+            "match": "comment_line_double-dash$",
+            "name": "comment.line.double-dash.jsont"
         },
-        "postfix-modifiers": {
-            "match": "\\b(where|by|get|set)\\b",
-            "name": "storage.modifier.other.jsont"
+        "comment.line.double-slash": {
+            "match": "comment_line_double-slash$",
+            "name": "comment.line.double-slash.jsont"
         },
-        "soft-keywords": {
-            "match": "\\b(catch|finally|field)\\b",
-            "name": "keyword.soft.jsont"
+        "comment.line.number-sign": {
+            "match": "comment_line_number-sign$",
+            "name": "comment.line.number-sign.jsont"
         },
-        "hard-keywords": {
-            "match": "\\b(as|typeof|is|in)\\b",
-            "name": "keyword.hard.jsont"
+        "comment.line.percentage": {
+            "match": "comment_line_percentage$",
+            "name": "comment.line.percentage.jsont"
         },
-        "control-keywords": {
-            "match": "\\b(if|else|while|do|when|try|throw|break|continue|return|for)\\b",
+        "constant": {
+            "match": "constant$",
+            "name": "constant.jsont"
+        },
+        "constant.character": {
+            "match": "constant_character$",
+            "name": "constant.character.jsont"
+        },
+        "constant.character.escape": {
+            "match": "constant_character_escape$",
+            "name": "constant.character.escape.jsont"
+        },
+        "constant.language": {
+            "match": "constant_language$",
+            "name": "constant.language.jsont"
+        },
+        "constant.numeric": {
+            "match": "constant_numeric$",
+            "name": "constant.numeric.jsont"
+        },
+        "constant.other": {
+            "match": "constant_other$",
+            "name": "constant.other.jsont"
+        },
+        "constant.regexp": {
+            "match": "constant_regexp$",
+            "name": "constant.regexp.jsont"
+        },
+        "constant.rgb-value": {
+            "match": "constant_rgb-value$",
+            "name": "constant.rgb-value.jsont"
+        },
+        "constant.sha.git-rebase": {
+            "match": "constant_sha_git-rebase$",
+            "name": "constant.sha.git-rebase.jsont"
+        },
+        "emphasis": {
+            "match": "emphasis$",
+            "name": "emphasis.jsont"
+        },
+        "entity": {
+            "match": "entity$",
+            "name": "entity.jsont"
+        },
+        "entity.name": {
+            "match": "entity_name$",
+            "name": "entity.name.jsont"
+        },
+        "entity.name.class": {
+            "match": "entity_name_class$",
+            "name": "entity.name.class.jsont"
+        },
+        "entity.name.function": {
+            "match": "entity_name_function$",
+            "name": "entity.name.function.jsont"
+        },
+        "entity.name.method": {
+            "match": "entity_name_method$",
+            "name": "entity.name.method.jsont"
+        },
+        "entity.name.section": {
+            "match": "entity_name_section$",
+            "name": "entity.name.section.jsont"
+        },
+        "entity.name.selector": {
+            "match": "entity_name_selector$",
+            "name": "entity.name.selector.jsont"
+        },
+        "entity.name.tag": {
+            "match": "entity_name_tag$",
+            "name": "entity.name.tag.jsont"
+        },
+        "entity.name.type": {
+            "match": "entity_name_type$",
+            "name": "entity.name.type.jsont"
+        },
+        "entity.other": {
+            "match": "entity_other$",
+            "name": "entity.other.jsont"
+        },
+        "entity.other.attribute-name": {
+            "match": "entity_other_attribute-name$",
+            "name": "entity.other.attribute-name.jsont"
+        },
+        "entity.other.inherited-class": {
+            "match": "entity_other_inherited-class$",
+            "name": "entity.other.inherited-class.jsont"
+        },
+        "header": {
+            "match": "header$",
+            "name": "header.jsont"
+        },
+        "invalid": {
+            "match": "invalid$",
+            "name": "invalid.jsont"
+        },
+        "invalid.deprecated": {
+            "match": "invalid_deprecated$",
+            "name": "invalid.deprecated.jsont"
+        },
+        "invalid.illegal": {
+            "match": "invalid_illegal$",
+            "name": "invalid.illegal.jsont"
+        },
+        "keyword": {
+            "match": "keyword$",
+            "name": "keyword.jsont"
+        },
+        "keyword.control": {
+            "match": "keyword_control$",
             "name": "keyword.control.jsont"
         },
-        "map-keywords": {
-            "match": "\\b(to)\\b",
-            "name": "keyword.map.jsont"
+        "keyword.control.less": {
+            "match": "keyword_control_less$",
+            "name": "keyword.control.less.jsont"
         },
-        "annotation-simple": {
-            "match": "(?<!\\w)@[\\w\\.]+\\b(?!:)",
-            "name": "entity.name.type.annotation.jsont"
+        "keyword.operator": {
+            "match": "keyword_operator$",
+            "name": "keyword.operator.jsont"
         },
-        "annotation-site-list": {
-            "begin": "(?<!\\w)(@\\w+):\\s*\\[",
-            "end": "\\]",
-            "beginCaptures": {
-                "1": {
-                    "name": "entity.name.type.annotation-site.jsont"
-                }
-            },
-            "patterns": [
-                {
-                    "include": "#unescaped-annotation"
-                }
-            ]
+        "keyword.operator.new": {
+            "match": "keyword_operator_new$",
+            "name": "keyword.operator.new.jsont"
         },
-        "annotation-site": {
-            "begin": "(?<!\\w)(@\\w+):\\s*(?!\\[)",
-            "end": "$",
-            "beginCaptures": {
-                "1": {
-                    "name": "entity.name.type.annotation-site.jsont"
-                }
-            },
-            "patterns": [
-                {
-                    "include": "#unescaped-annotation"
-                }
-            ]
+        "keyword.other": {
+            "match": "keyword_other$",
+            "name": "keyword.other.jsont"
         },
-        "unescaped-annotation": {
-            "match": "\\b[\\w\\.]+\\b",
-            "name": "entity.name.type.annotation.jsont"
+        "keyword.other.unit": {
+            "match": "keyword_other_unit$",
+            "name": "keyword.other.unit.jsont"
         },
-        "class-declaration": {
-            "match": "\\b(class|interface)\\s+(\\b\\w+\\b|`[^`]+`)\\s*(?<GROUP><([^<>]|\\g<GROUP>)+>)?",
-            "captures": {
-                "1": {
-                    "name": "storage.type.class.jsont"
-                },
-                "2": {
-                    "name": "entity.name.type.class.jsont"
-                },
-                "3": {
-                    "patterns": [
-                        {
-                            "include": "#type-parameter"
-                        }
-                    ]
-                }
-            }
+        "markup": {
+            "match": "markup$",
+            "name": "markup.jsont"
         },
-        "object-declaration": {
-            "match": "\\b(object)\\s+(\\b\\w+\\b|`[^`]+`)",
-            "captures": {
-                "1": {
-                    "name": "storage.type.object.jsont"
-                },
-                "2": {
-                    "name": "entity.name.type.object.jsont"
-                }
-            }
+        "markup.bold": {
+            "match": "markup_bold$",
+            "name": "markup.bold.jsont"
         },
-        "type-alias": {
-            "match": "\\b(typealias)\\s+(\\b\\w+\\b|`[^`]+`)\\s*(?<GROUP><([^<>]|\\g<GROUP>)+>)?",
-            "captures": {
-                "1": {
-                    "name": "storage.type.alias.jsont"
-                },
-                "2": {
-                    "name": "entity.name.type.jsont"
-                },
-                "3": {
-                    "patterns": [
-                        {
-                            "include": "#type-parameter"
-                        }
-                    ]
-                }
-            }
+        "markup.changed": {
+            "match": "markup_changed$",
+            "name": "markup.changed.jsont"
         },
-        "function-declaration": {
-            "begin": "\\b(fun)\\b\\s*(?<GROUP><([^<>]|\\g<GROUP>)+>)?\\s*(?:(\\w+)\\.)?(\\b\\w+\\b|`[^`]+`)\\(",
-            "beginCaptures": {
-                "1": {
-                    "name": "storage.type.function.jsont"
-                },
-                "2": {
-                    "patterns": [
-                        {
-                            "include": "#type-parameter"
-                        }
-                    ]
-                },
-                "4": {
-                    "name": "entity.name.type.class.extension.jsont"
-                },
-                "5": {
-                    "name": "entity.name.function.declaration.jsont"
-                }
-            },
-            "end": "\\)",
-            "endCaptures": {
-                "1": {
-                    "name": "keyword.operator.assignment.type.jsont"
-                }
-            },
-            "patterns": [
-                {
-                    "include":  "#parameter-declaration"
-                }
-            ]
+        "markup.deleted": {
+            "match": "markup_deleted$",
+            "name": "markup.deleted.jsont"
         },
-        "parameter-declaration": {
-            "match": "\\b(\\w+)\\s*(:)\\s*(\\w+)(\\?)?(,)?",
-            "captures": {
-                "1": {
-                    "name": "variable.parameter.jsont"
-                },
-                "2": {
-                    "name": "keyword.operator.assignment.type.jsont"
-                },
-                "3": {
-                    "name": "entity.name.type.jsont"
-                },
-                "4": {
-                    "name": "keyword.operator.optional"
-                },
-                "5": {
-                    "name": "punctuation.separator.delimiter.jsont"
-                }
-            }
+        "markup.heading": {
+            "match": "markup_heading$",
+            "name": "markup.heading.jsont"
         },
-        "variable-declaration": {
-            "match": "\\b(var)\\b\\s*(?<GROUP><([^<>]|\\g<GROUP>)+>)?",
-            "captures": {
-                "1": {
-                    "name": "storage.type.variable.jsont"
-                },
-                "2": {
-                    "patterns": [
-                        {
-                            "include": "#type-parameter"
-                        }
-                    ]
-                }
-            }
+        "markup.inline.raw": {
+            "match": "markup_inline_raw$",
+            "name": "markup.inline.raw.jsont"
         },
-        "constant-declaration": {
-            "match": "\\b(val)\\b\\s*(?<GROUP><([^<>]|\\g<GROUP>)+>)?",
-            "captures": {
-                "1": {
-                    "name": "storage.type.variable.readonly.jsont"
-                },
-                "2": {
-                    "patterns": [
-                        {
-                            "include": "#type-parameter"
-                        }
-                    ]
-                }
-            }
+        "markup.inserted": {
+            "match": "markup_inserted$",
+            "name": "markup.inserted.jsont"
         },
-        "variable" : {
-            "match": "\\b(\\w+)(?=\\s*[:=])",
-            "captures": {
-                "1": {
-                    "name": "variable.other.definition.jsont"
-                }
-            }
+        "markup.italic": {
+            "match": "markup_italic$",
+            "name": "markup.italic.jsont"
         },
-        "object" : {
-            "match": "\\b(\\w+)(?=\\.)",
-            "captures": {
-                "1": {
-                    "name": "variable.other.object.jsont"
-                }
-            }
+        "markup.list": {
+            "match": "markup_list$",
+            "name": "markup.list.jsont"
         },
-        "type-parameter": {
-            "patterns": [
-                {
-                    "match": "(:)?\\s*(\\b\\w+\\b)(\\?)?",
-                    "captures": {
-                        "1": {
-                            "name": "keyword.operator.assignment.jsont"
-                        },
-                        "2": {
-                            "name": "entity.name.type.jsont"
-                        },
-                        "3": {
-                            "name": "keyword.operator.optional"
-                        }
-                    }
-                },
-                {
-                    "match": "\\b(in|out)\\b",
-                    "name": "storage.modifier.jsont"
-                }
-            ]
+        "markup.list.numbered": {
+            "match": "markup_list_numbered$",
+            "name": "markup.list.numbered.jsont"
         },
-        "type-annotation": {
-            "match": "(?<![:?]):\\s*(\\w|\\?|\\s|->|(?<GROUP>[<(]([^<>()\"']|\\g<GROUP>)+[)>]))+",
-            "captures": {
-                "0": {
-                    "patterns": [
-                        {
-                            "include": "#type-parameter"
-                        }
-                    ]
-                }
-            }
+        "markup.list.unnumbered": {
+            "match": "markup_list_unnumbered$",
+            "name": "markup.list.unnumbered.jsont"
         },
-        "function-call": {
-            "match": "(?:(\\?\\.)|(\\.))?(\\b\\w+\\b|`[^`]+`)\\s*(?<GROUP><([^<>]|\\g<GROUP>)+>)?\\s*(?=[({])",
-            "captures": {
-                "1": {
-                    "name": "punctuation.accessor.optional.jsont"
-                },
-                "2": {
-                    "name": "punctuation.separator.period.jsont"
-                },
-                "3": {
-                    "name": "entity.name.function.call.jsont"
-                },
-                "4": {
-                    "patterns": [
-                        {
-                            "include": "#type-parameter"
-                        }
-                    ]
-                }
-            }
+        "markup.other": {
+            "match": "markup_other$",
+            "name": "markup.other.jsont"
         },
-        "property.reference": {
-            "match": "(?:(\\?\\.)|(\\.))(\\w+)\\b",
-            "captures": {
-                "1": {
-                    "name": "punctuation.accessor.optional.jsont"
-                },
-                "2": {
-                    "name": "punctuation.separator.period.jsont"
-                },
-                "3": {
-                    "name": "variable.other.property.jsont"
-                }
-            }
+        "markup.punctuation.list.beginning": {
+            "match": "markup_punctuation_list_beginning$",
+            "name": "markup.punctuation.list.beginning.jsont"
         },
-        "method-reference": {
-            "match": "\\??::(\\b\\w+\\b|`[^`]+`)",
-            "captures": {
-                "1": {
-                    "name": "entity.name.function.reference.jsont"
-                }
-            }
+        "markup.punctuation.quote.beginning": {
+            "match": "markup_punctuation_quote_beginning$",
+            "name": "markup.punctuation.quote.beginning.jsont"
         },
-        "key": {
-            "match": "\\b(\\w=)\\s*(=)",
-            "captures": {
-                "1": {
-                    "name": "variable.parameter.jsont"
-                },
-                "2": {
-                    "name": "keyword.operator.assignment.jsont"
-                }
-            }
+        "markup.quote": {
+            "match": "markup_quote$",
+            "name": "markup.quote.jsont"
         },
-        "string-empty": {
-            "match": "(?<!\")\"\"(?!\")",
-            "name": "string.quoted.double.jsont"
+        "markup.raw": {
+            "match": "markup_raw$",
+            "name": "markup.raw.jsont"
+        },
+        "markup.underline": {
+            "match": "markup_underline$",
+            "name": "markup.underline.jsont"
+        },
+        "markup.underline.link": {
+            "match": "markup_underline_link$",
+            "name": "markup.underline.link.jsont"
+        },
+        "meta": {
+            "match": "meta$",
+            "name": "meta.jsont"
+        },
+        "meta.cast": {
+            "match": "meta_cast$",
+            "name": "meta.cast.jsont"
+        },
+        "meta.parameter.type.variable": {
+            "match": "meta_parameter_type_variable$",
+            "name": "meta.parameter.type.variable.jsont"
+        },
+        "meta.preprocessor": {
+            "match": "meta_preprocessor$",
+            "name": "meta.preprocessor.jsont"
+        },
+        "meta.preprocessor.numeric": {
+            "match": "meta_preprocessor_numeric$",
+            "name": "meta.preprocessor.numeric.jsont"
+        },
+        "meta.preprocessor.string": {
+            "match": "meta_preprocessor_string$",
+            "name": "meta.preprocessor.string.jsont"
+        },
+        "meta.return-type": {
+            "match": "meta_return-type$",
+            "name": "meta.return-type.jsont"
+        },
+        "meta.selector": {
+            "match": "meta_selector$",
+            "name": "meta.selector.jsont"
+        },
+        "meta.structure.dictionary.key.python": {
+            "match": "meta_structure_dictionary_key_python$",
+            "name": "meta.structure.dictionary.key.python.jsont"
+        },
+        "meta.tag": {
+            "match": "meta_tag$",
+            "name": "meta.tag.jsont"
+        },
+        "meta.type.annotation": {
+            "match": "meta_type_annotation$",
+            "name": "meta.type.annotation.jsont"
+        },
+        "meta.type.name": {
+            "match": "meta_type_name$",
+            "name": "meta.type.name.jsont"
+        },
+        "metatag.php": {
+            "match": "metatag_php$",
+            "name": "metatag.php.jsont"
+        },
+        "storage": {
+            "match": "storage$",
+            "name": "storage.jsont"
+        },
+        "storage.modifier": {
+            "match": "storage_modifier$",
+            "name": "storage.modifier.jsont"
+        },
+        "storage.modifier.import.java": {
+            "match": "storage_modifier_import_java$",
+            "name": "storage.modifier.import.java.jsont"
+        },
+        "storage.modifier.package.java": {
+            "match": "storage_modifier_package_java$",
+            "name": "storage.modifier.package.java.jsont"
+        },
+        "storage.type": {
+            "match": "storage_type$",
+            "name": "storage.type.jsont"
+        },
+        "storage.type.cs": {
+            "match": "storage_type_cs$",
+            "name": "storage.type.cs.jsont"
+        },
+        "storage.type.java": {
+            "match": "storage_type_java$",
+            "name": "storage.type.java.jsont"
         },
         "string": {
-            "begin": "(?<!\")\"(?!\")",
-            "end": "\"",
-            "name": "string.quoted.double.jsont",
-            "patterns": [
-                {
-                    "match": "\\\\.",
-                    "name": "constant.character.escape.jsont"
-                },
-                {
-                    "include": "#string-escape-simple"
-                },
-                {
-                    "include": "#string-escape-bracketed"
-                }
-            ]
+            "match": "string$",
+            "name": "string.jsont"
         },
-        "string-multiline": {
-            "begin": "\"\"\"",
-            "end": "\"\"\"",
-            "name": "string.quoted.double.jsont",
-            "patterns": [
-                {
-                    "match": "\\\\.",
-                    "name": "constant.character.escape.jsont"
-                },
-                {
-                    "include": "#string-escape-simple"
-                },
-                {
-                    "include": "#string-escape-bracketed"
-                }
-            ]
+        "string.html": {
+            "match": "string_html$",
+            "name": "string.html.jsont"
         },
-        "string-escape-simple": {
-            "match": "(?<!\\\\)\\$\\w+\\b",
-            "name": "variable.string-escape.jsont"
+        "string.interpolated": {
+            "match": "string_interpolated$",
+            "name": "string.interpolated.jsont"
         },
-        "string-escape-bracketed": {
-            "begin": "(?<!\\\\)(\\$\\{)",
-            "end": "(\\})",
-            "name": "meta.template.expression.jsont",
-            "beginCaptures": {
-                "1": {
-                    "name": "punctuation.definition.template-expression.begin"
-                }
-            },
-            "endCaptures": {
-                "1": {
-                    "name": "punctuation.definition.template-expression.end"
-                }
-            },
-            "patterns": [
-                {
-                    "include": "#code"
-                }
-            ]
+        "string.jade": {
+            "match": "string_jade$",
+            "name": "string.jade.jsont"
         },
-        "character": {
-            "begin": "'",
-            "end": "'",
-            "name": "string.quoted.single.jsont",
-            "patterns": [
-                {
-                    "match": "\\\\.",
-                    "name": "constant.character.escape.jsont"
-                }
-            ]
+        "string.other": {
+            "match": "string_other$",
+            "name": "string.other.jsont"
         },
-        "decimal-literal": {
-            "match": "\\b\\d[\\d_]*(\\.[\\d_]+)?((e|E)\\d+)?(u|U)?(L|F|f)?\\b",
-            "name": "constant.numeric.decimal.jsont"
+        "string.quoted": {
+            "match": "string_quoted$",
+            "name": "string.quoted.jsont"
         },
-        "hex-literal": {
-            "match": "0(x|X)[A-Fa-f0-9][A-Fa-f0-9_]*(u|U)?",
-            "name": "constant.numeric.hex.jsont"
+        "string.quoted.double": {
+            "match": "string_quoted_double$",
+            "name": "string.quoted.double.jsont"
         },
-        "binary-literal": {
-            "match": "0(b|B)[01][01_]*",
-            "name": "constant.numeric.binary.jsont"
+        "string.quoted.other": {
+            "match": "string_quoted_other$",
+            "name": "string.quoted.other.jsont"
         },
-        "boolean-literal": {
-            "match": "\\b(true|false)\\b",
-            "name": "constant.language.boolean.jsont"
+        "string.quoted.single": {
+            "match": "string_quoted_single$",
+            "name": "string.quoted.single.jsont"
         },
-        "null-literal": {
-            "match": "\\bnull\\b",
-            "name": "constant.language.null.jsont"
+        "string.quoted.triple": {
+            "match": "string_quoted_triple$",
+            "name": "string.quoted.triple.jsont"
         },
-        "lambda-arrow": {
-            "match": "->",
-            "name": "storage.type.function.arrow.jsont"
+        "string.regexp": {
+            "match": "string_regexp$",
+            "name": "string.regexp.jsont"
         },
-        "operators": {
-            "patterns": [
-                {
-                    "match": "(===?|\\!==?|<=|>=|<|>)",
-                    "name": "keyword.operator.comparison.jsont"
-                },
-                {
-                    "match": "(\\?:)",
-                    "name": "keyword.operator.elvis.jsont"
-                },
-                {
-                    "match": "([+*/%-]=)",
-                    "name": "keyword.operator.assignment.arithmetic.jsont"
-                },
-                {
-                    "match": "(=)",
-                    "name": "keyword.operator.assignment.jsont"
-                },
-                {
-                    "match": "([+*/%-])",
-                    "name": "keyword.operator.arithmetic.jsont"
-                },
-                {
-                    "match": "(!|&&|\\|\\|)",
-                    "name": "keyword.operator.logical.jsont"
-                },
-                {
-                    "match": "(--|\\+\\+)",
-                    "name": "keyword.operator.increment-decrement.jsont"
-                },
-                {
-                    "match": "(\\.\\.)",
-                    "name": "keyword.operator.range.jsont"
-                }
-            ]
+        "string.unquoted": {
+            "match": "string_unquoted$",
+            "name": "string.unquoted.jsont"
         },
-        "self-reference": {
-            "match": "\\b(this|super)(@\\w+)?\\b",
-            "name": "variable.language.this.jsont"
+        "string.xml": {
+            "match": "string_xml$",
+            "name": "string.xml.jsont"
+        },
+        "string.yaml": {
+            "match": "string_yaml$",
+            "name": "string.yaml.jsont"
+        },
+        "strong": {
+            "match": "strong$",
+            "name": "strong.jsont"
+        },
+        "support": {
+            "match": "support$",
+            "name": "support.jsont"
+        },
+        "support.class": {
+            "match": "support_class$",
+            "name": "support.class.jsont"
+        },
+        "support.constant": {
+            "match": "support_constant$",
+            "name": "support.constant.jsont"
+        },
+        "support.function": {
+            "match": "support_function$",
+            "name": "support.function.jsont"
+        },
+        "support.function.git-rebase": {
+            "match": "support_function_git-rebase$",
+            "name": "support.function.git-rebase.jsont"
+        },
+        "support.other": {
+            "match": "support_other$",
+            "name": "support.other.jsont"
+        },
+        "support.property-value": {
+            "match": "support_property-value$",
+            "name": "support.property-value.jsont"
+        },
+        "support.type": {
+            "match": "support_type$",
+            "name": "support.type.jsont"
+        },
+        "support.type.property-name": {
+            "match": "support_type_property-name$",
+            "name": "support.type.property-name.jsont"
+        },
+        "support.type.property-name.css": {
+            "match": "support_type_property-name_css$",
+            "name": "support.type.property-name.css.jsont"
+        },
+        "support.type.property-name.less": {
+            "match": "support_type_property-name_less$",
+            "name": "support.type.property-name.less.jsont"
+        },
+        "support.type.property-name.scss": {
+            "match": "support_type_property-name_scss$",
+            "name": "support.type.property-name.scss.jsont"
+        },
+        "support.variable": {
+            "match": "support_variable$",
+            "name": "support.variable.jsont"
+        },
+        "variable": {
+            "match": "variable$",
+            "name": "variable.jsont"
+        },
+        "variable.language": {
+            "match": "variable_language$",
+            "name": "variable.language.jsont"
+        },
+        "variable.name": {
+            "match": "variable_name$",
+            "name": "variable.name.jsont"
+        },
+        "variable.other": {
+            "match": "variable_other$",
+            "name": "variable.other.jsont"
+        },
+        "variable.parameter": {
+            "match": "variable_parameter$",
+            "name": "variable.parameter.jsont"
         }
     }
 }
