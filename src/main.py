@@ -2,7 +2,7 @@ from pydantic import BaseModel
 
 
 PATH = "src/names.txt"
-SCHEMA = "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json"
+SCHEMA = "jsont.schema.json"
 
 
 class Element(BaseModel):
@@ -10,7 +10,7 @@ class Element(BaseModel):
     name: str
 
 class Language(BaseModel):
-    _schema: str = SCHEMA
+    schema_: str = SCHEMA
     name: str = "JSONT"
     scopeName: str = "source.jsont"
     fileTypes: list[str] = ["jsont"]
@@ -35,4 +35,4 @@ with open(PATH, mode="r", encoding="utf8") as names:
 
 
 printable_json = language.model_dump_json()
-print(printable_json.replace("_schema", "$schema"))
+print(printable_json.replace("schema_", "$schema"))

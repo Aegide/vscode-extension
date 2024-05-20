@@ -1,4 +1,5 @@
 {
+    "$schema": "jsont.schema.json",
     "name": "JSONT",
     "scopeName": "source.jsont",
     "fileTypes": [
